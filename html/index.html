@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Lover's Page</title>
+    <style>
+        body {
+            background: url('https://cataas.com/cat') repeat;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #banner {
+            background-color: black;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #banner img {
+            width: 100px;
+            height: auto;
+            animation: rainbow 2s infinite;
+        }
+        @keyframes rainbow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+        #content {
+            padding: 20px;
+        }
+        #moreCatsBtn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #808080; /* Grey */
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a 3D shadow effect */
+        }
+        #moreCatsBtn:hover {
+            background-color: #737373; /* Darker grey on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <img src="https://cataas.com/cat/gif">
+    </div>
+    <div id="content">
+        <h1>Welcome to the Cat Lover's Page!</h1>
+        <p>This page is dedicated to all the cat lovers out there.</p>
+        <button id="moreCatsBtn" onclick="playClickSound()">Click for more catz</button>
+        <audio id="catSound" src="https://www.zapsplat.com/music/single-button-press-guitar-effects-1/download/mp3"></audio>
+    </div>
+
+    <script>
+        function playClickSound() {
+            var audio = document.getElementById("catSound");
+            audio.play();
+        }
+    </script>
+</body>
+</html>
